@@ -37,15 +37,24 @@ def cached_load_csv(file):
     return pd.read_csv(file)
 
 def get_mysql_engine():
-    """Improvement: Centralized engine creation using secure secrets."""
+
     try:
-        user = st.secrets["DB_USER"]
-        pw = st.secrets["DB_PASS"]
-        host = st.secrets["DB_HOST"]
-        db = st.secrets["DB_NAME"]
-        return create_engine(f"mysql+mysqlconnector://{user}:{pw}@{host}/{db}")
-    except KeyError as e:
-        st.error(f"Secret Key Missing: {e}. Check .streamlit/secrets.toml")
+
+        DB_USER = st.secrets.get("DB_USER", "")
+        DB_PASS = st.secrets.get("DB_PASS", "")
+        DB_HOST = st.secrets.get("DB_HOST", "")
+        DB_NAME = st.secrets.get("DB_NAME", "")
+
+        engine = create_engine(
+            f"mysql+mysqlconnector://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}"
+        )
+
+        return engine
+
+    except Exception as e:
+
+        st.warning("Database connection unavailable")
+
         return None
 
 # Load Global Styles
