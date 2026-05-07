@@ -1,0 +1,51 @@
+body {
+    background-color: #f5f7fa;
+}
+
+.main {
+    background-color: #f5f7fa;
+}
+
+section[data-testid="stSidebar"] {
+    background-color: #111827;
+}
+
+section[data-testid="stSidebar"] * {
+    color: white;
+}
+
+div[data-testid="metric-container"] {
+    background-color: white;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    border-left: 5px solid #2563eb;
+}
+
+h1, h2, h3 {
+    color: #111827;
+}
+
+.stButton>button {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 10px;
+    height: 45px;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+}
+
+.stDownloadButton>button {
+    background-color: #059669;
+    color: white;
+    border-radius: 10px;
+    height: 45px;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+}
+
+section[data-testid="stSidebarNav"] {
+    display: none;
+}
