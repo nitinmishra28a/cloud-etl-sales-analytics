@@ -92,17 +92,17 @@ Forecasting Engine
 
 The platform uses Prophet time-series forecasting to predict future monthly sales trends and revenue growth.
 
-⚙️ Installation Guide
-1️⃣ Clone Repository
+# Installation Guide
+#1] Clone Repository
 git clone <your-repository-link>
-2️⃣ Create Virtual Environment
+#2️] Create Virtual Environment
 python -m venv venv
-3️⃣ Activate Environment
+#3️] Activate Environment
 Windows
 venv\Scripts\activate
-4️⃣ Install Requirements
+#4] Install Requirements
 pip install -r requirements.txt
-5️⃣ Run Application
+#5] Run Application
 streamlit run app.py
  Future Enhancements
 Cloud deployment
